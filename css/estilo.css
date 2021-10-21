@@ -5,3 +5,9 @@
     position: absolute;
     left: 50px;
 }
+.borde{
+    border: 1px solid black;
+}
+.negrita{
+    font-weight: bold;
+}

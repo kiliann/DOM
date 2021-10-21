@@ -40,3 +40,42 @@ function mover(){
     posicion +=1;
     console.log('TRON')
 }
+
+    function construir(){
+
+        let div = document.getElementsByClassName('borde')[0];
+        //console.log(div);
+        //div.innerHTML = '<p>Este es un texto <span class="negrita">en negrita</span>.</p> ';
+
+        let p = document.createElement('p');
+        div.appendChild(p);
+        let nodoTexto = document.createTextNode('Este es un texto ...');
+        p.appendChild(nodoTexto);
+        let span = document.createElement('span');
+        p.appendChild(span);
+        let nodotexto2 = document.createTextNode('en negrita');
+        span.classList.add('negrita');
+        span.appendChild(nodotexto2);
+        let img = document.createElement('img');
+
+        div.insertBefore(img,p);
+        img.setAttribute('src','img/Sir.jpg');
+
+
+
+    }
+
+    function destruir(){
+        let p = document.getElementsByTagName('p')[2];
+        console.log(p.innerHTML);
+        p.remove();
+    }
+
+    function destruirTodo(){
+        let div = document.getElementsByClassName('borde')[0];
+        while (div.firstElementChild){
+            div.removeChild(div.firstElementChild);
+        }
+    }
+
+
